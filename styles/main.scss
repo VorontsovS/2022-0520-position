@@ -1,0 +1,58 @@
+$breakpoint-1: (max-width: 700px);
+$breakpoint-2: (max-width: 500px);
+
+body {
+    margin: 0;
+  }
+
+.container {
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 100vh;
+    background-color: bisque;
+    margin: auto;
+    padding: 20px 20px 70px 20px;
+    @media #{$breakpoint-2} {
+        padding: 0 0 50px 0;
+    }
+}
+
+.first, .second {
+    box-sizing: border-box;
+    width: 150px;
+    min-height: 50px;
+    border: 2px solid black;
+    margin-bottom: 10px;
+    @media #{$breakpoint-1} {
+        width: 100%;
+    }
+    @media #{$breakpoint-2} {
+        margin: 0;
+    }
+
+}
+
+.first {
+    background-color: yellow;
+}
+
+.second {
+    background-color: red;
+}
+
+.third {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: grey;
+    box-sizing: border-box;
+    width: 100px;
+    min-height: 50px;
+    border: 2px solid black;
+    
+    @media #{$breakpoint-2} {
+        width: 100%;
+        bottom: 0;
+        right: 0;
+    }
+}
